@@ -5,7 +5,6 @@ TITLE="Alien in Castle"
 WIDTH=700
 HEIGHT=700
 back_color=(172,178,189)
-line_color=(255,255,255)
 tile_size=70
 state='menu'
 sound='on'
@@ -45,19 +44,15 @@ def world(data):
         for tile in row:
             if tile==1:
                 img='castle_center'
-                rect_x = col_count * tile_size
-                rect_y = row_count * tile_size
                 x=col_count*tile_size
                 y=row_count*tile_size
-                tile=(img,(x,y),(rect_x,rect_y))
+                tile=(img,(x,y))
                 tile_list.append(tile)
             if tile==2:
                 img='castle_mid'
-                rect_x = col_count * tile_size
-                rect_y = row_count * tile_size
                 x=col_count*tile_size
                 y=row_count*tile_size
-                tile=(img,(x,y),(rect_x,rect_y))
+                tile=(img,(x,y))
                 tile_list.append(tile)
             col_count+=1
         row_count+=1
